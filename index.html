@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Clock</h1>
+        
+        <div class="study-modes" id="studyModes">
+            <div class="mode-box" data-mode="chill">
+                <h2>Chill Mode</h2>
+                <p>25 minutes study, 5 minutes break</p>
+            </div>
+            <div class="mode-box" data-mode="regular">
+                <h2>Regular Mode</h2>
+                <p>45 minutes study, 10 minutes break</p>
+            </div>
+            <div class="mode-box" data-mode="intense">
+                <h2>Intense Mode</h2>
+                <p>60 minutes study, 15 minutes break</p>
+            </div>
+        </div>
+
+        <div class="timer-container" id="timerContainer" style="display: none;">
+            <div class="timer-display" id="timerDisplay">00:00</div>
+            <button id="startStopBtn">Start</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
