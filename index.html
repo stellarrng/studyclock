@@ -51,7 +51,56 @@
             <button id="startStopBtn">Start</button>
             <button id="backBtn" class="back-btn">Back to Modes</button>
         </div>
-        <div class="footer">✨🎀✨ Pick your study buddy and let's make learning magical! ✨🎀✨</div>
+        <div class="footer">✨🎀✨ Pick your study buddy and let's make learning magical! ✨��✨</div>
+    </div>
+
+    <!-- Study Session UI (hidden by default) -->
+    <div class="study-session" id="studySession" style="display: none;">
+        <div class="session-header">
+            <button id="backHomeBtn" class="back-home-btn">🏠 Back Home</button>
+            <div class="session-title">
+                <span id="sessionModeEmoji">😴</span>
+                <span id="sessionModeName">Sleepy Cat Mode</span>
+                <div class="session-subtitle" id="sessionSubtitle">😴 Study Time - You got this! ✨</div>
+            </div>
+            <div class="session-count">
+                <span>Completed Tasks:</span> <span id="sessionCount">0</span>/<span id="sessionTotal">0</span> <span>🏆</span>
+            </div>
+        </div>
+        <div class="session-main">
+            <div class="timer-panel">
+                <div class="timer-circle" id="timerCircle">
+                    <div class="timer-time" id="sessionTimerDisplay">25:00</div>
+                    <div class="timer-state" id="timerState">Focus 🎯</div>
+                    <div class="timer-emoji" id="timerEmoji">😴</div>
+                </div>
+                <div class="timer-controls">
+                    <button id="sessionStartBtn" class="start-btn">▶️ Start</button>
+                    <button id="sessionResetBtn" class="reset-btn">🔄 Reset</button>
+                </div>
+                <div class="mode-details">
+                    <div class="details-title">📚 Mode Details</div>
+                    <div class="details-row">
+                        <div class="details-box"><span id="detailsStudy">25 min</span><div class="details-label">Study Time ⏰</div></div>
+                        <div class="details-box"><span id="detailsBreak">15 min</span><div class="details-label">Break Time ☕️</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks-panel">
+                <div class="tasks-header">
+                    <span class="tasks-title">📝 Study Tasks</span>
+                    <button id="addTaskBtn" class="add-task-btn">✨ Add Task</button>
+                </div>
+                <ul class="tasks-list" id="tasksList">
+                    <!-- Tasks will be added here -->
+                </ul>
+                <div class="no-tasks" id="noTasksMsg">
+                    <div class="no-tasks-emoji">📚</div>
+                    <div>No tasks added yet!<br>Add some study goals to get started ✨</div>
+                    <button id="addFirstTaskBtn" class="add-task-btn">✨ Add your first task</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
