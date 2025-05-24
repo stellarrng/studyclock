@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerContainer = document.getElementById('timerContainer');
     const timerDisplay = document.getElementById('timerDisplay');
     const startStopBtn = document.getElementById('startStopBtn');
+    const backBtn = document.getElementById('backBtn');
 
     let timer;
     let timeLeft;
@@ -25,6 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
             studyModes.style.display = 'none';
             timerContainer.style.display = 'block';
         });
+    });
+
+    // Back button functionality
+    backBtn.addEventListener('click', () => {
+        stopTimer();
+        studyModes.style.display = 'grid';
+        timerContainer.style.display = 'none';
+        currentMode = null;
     });
 
     // Start/Stop button functionality

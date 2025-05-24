@@ -3,32 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Clock</title>
+    <title>StudyBuddy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Study Clock</h1>
-        
+        <div class="star-emoji">⭐️</div>
+        <h1 class="main-title">StudyBuddy</h1>
+        <p class="subtitle">Choose your adorable study companion and make learning super fun! ✨</p>
         <div class="study-modes" id="studyModes">
-            <div class="mode-box" data-mode="chill">
-                <h2>Chill Mode</h2>
-                <p>25 minutes study, 5 minutes break</p>
+            <div class="mode-box cat" data-mode="cat">
+                <div class="mode-emoji">😴</div>
+                <div class="emoji-circle cat"><span class="buddy-emoji">🐱</span></div>
+                <h2>Sleepy Cat Mode</h2>
+                <p class="mode-desc">Purr-fect for gentle learning 🐈</p>
+                <div class="time-boxes">
+                    <div class="time-row"><span>Study Time</span><span class="study-time">25 min</span></div>
+                    <div class="time-row"><span>Break Time</span><span class="break-time">15 min</span></div>
+                </div>
+                <div class="mode-footer">😴💓</div>
             </div>
-            <div class="mode-box" data-mode="regular">
-                <h2>Regular Mode</h2>
-                <p>45 minutes study, 10 minutes break</p>
+            <div class="mode-box bunny" data-mode="bunny">
+                <div class="mode-emoji">🌸</div>
+                <div class="emoji-circle bunny"><span class="buddy-emoji">🐰</span></div>
+                <h2>Happy Bunny Mode</h2>
+                <p class="mode-desc">Hop into focused study time! 🐇</p>
+                <div class="time-boxes">
+                    <div class="time-row"><span>Study Time</span><span class="study-time">45 min</span></div>
+                    <div class="time-row"><span>Break Time</span><span class="break-time">10 min</span></div>
+                </div>
+                <div class="mode-footer">🌸🥕</div>
             </div>
-            <div class="mode-box" data-mode="intense">
-                <h2>Intense Mode</h2>
-                <p>60 minutes study, 15 minutes break</p>
+            <div class="mode-box panda" data-mode="panda">
+                <div class="mode-emoji">⚡️</div>
+                <div class="emoji-circle panda"><span class="buddy-emoji">🐼</span></div>
+                <h2>Power Panda Mode</h2>
+                <p class="mode-desc">Bamboo-powered productivity! 🐼</p>
+                <div class="time-boxes">
+                    <div class="time-row"><span>Study Time</span><span class="study-time">90 min</span></div>
+                    <div class="time-row"><span>Break Time</span><span class="break-time">20 min</span></div>
+                </div>
+                <div class="mode-footer">🎋💪</div>
             </div>
         </div>
-
         <div class="timer-container" id="timerContainer" style="display: none;">
             <div class="timer-display" id="timerDisplay">00:00</div>
             <button id="startStopBtn">Start</button>
+            <button id="backBtn" class="back-btn">Back to Modes</button>
         </div>
+        <div class="footer">✨🎀✨ Pick your study buddy and let's make learning magical! ✨🎀✨</div>
     </div>
     <script src="script.js"></script>
 </body>
