@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const backBtn = document.getElementById('backBtn');
     const container = document.querySelector('.container');
     const studySession = document.getElementById('studySession');
+    const landingPage = document.getElementById('landingPage');
 
     // Session UI elements
     const backHomeBtn = document.getElementById('backHomeBtn');
@@ -72,15 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Navigation ---
     function showModeSelection() {
-        studyModes.style.display = 'flex';
+        landingPage.style.display = '';
         studySession.style.display = 'none';
-        container.querySelector('.footer').style.display = '';
     }
     function showSessionUI() {
-        studyModes.style.display = 'none';
-        timerContainer.style.display = 'none';
+        landingPage.style.display = 'none';
         studySession.style.display = 'block';
-        container.querySelector('.footer').style.display = 'none';
     }
 
     // --- Mode Selection ---
