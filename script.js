@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- DOM Elements ---
+    // elements 
     const studyModes = document.getElementById('studyModes');
     const timerContainer = document.getElementById('timerContainer');
     const backBtn = document.getElementById('backBtn');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tasksList = document.getElementById('tasksList');
     const noTasksMsg = document.getElementById('noTasksMsg');
 
-    // --- Mode Data ---
+    // mode data
     const MODES = {
         cat: {
             name: 'Sleepy Cat Mode',
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- State ---
+    // state 
     let currentMode = null;
     let timer = null;
     let isRunning = false;
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let sessionGoal = 0;
     let tasks = [];
 
-    // --- Navigation ---
+    // navigation 
     function showModeSelection() {
         landingPage.style.display = '';
         studySession.style.display = 'none';
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         studySession.style.display = 'block';
     }
 
-    // --- Mode Selection ---
+    // mode selection 
     document.querySelectorAll('.mode-box').forEach(box => {
         box.addEventListener('click', () => {
             const mode = box.dataset.mode;
@@ -91,13 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Back Home ---
+    // button to return home 
     backHomeBtn.addEventListener('click', () => {
         stopTimer();
         showModeSelection();
     });
 
-    // --- Session UI Setup ---
+    // session ui setup 
     function setupSessionUI(mode) {
         const m = MODES[mode];
         sessionModeEmoji.textContent = m.emoji;
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderTasks();
     }
 
-    // --- Timer Logic ---
+    // Timer logic 
     function startTimer() {
         if (isRunning) return;
         isRunning = true;
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     sessionResetBtn.addEventListener('click', resetTimer);
 
-    // --- Tasks Logic ---
+    // Task Logic 
     function renderTasks() {
         tasksList.innerHTML = '';
         if (tasks.length === 0) {
@@ -235,6 +235,5 @@ document.addEventListener('DOMContentLoaded', () => {
     addTaskBtn.addEventListener('click', addTask);
     addFirstTaskBtn.addEventListener('click', addTask);
 
-    // --- Init ---
     showModeSelection();
 }); 
